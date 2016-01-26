@@ -1,4 +1,2 @@
 apply plugin: 'java'
-dependencies {
-	compile group: 'org.apache.commons' , name: 'commons-csv' , version: '1.2'
-}
+compile 'org.apache.commons:commons-csv:1.2'
