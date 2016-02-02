@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+CSVDemo-Class: gradleDemo.GradleDemo
+Implementation-Title: Lab03 V1.0
+Implementation-Version: 1.0.1
+

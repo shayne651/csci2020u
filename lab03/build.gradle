@@ -1,0 +1,32 @@
+apply plugin: 'java'
+repositories {
+    mavenCentral()
+ }
+dependencies{
+  compile group: 'org.apache.commons',
+    name: 'commons-csv',
+    version: '1.2'
+}
+version= '1.0.1'
+jar{
+	manifest{
+		attributes 'CSVDemo-Class': 'gradleDemo.GradleDemo',
+			'Implementation-Title': 'Lab03 V1.0',
+			'Implementation-Version': version
+	}
+}
+buildscript {
+   repositories {
+      flatDir dirs: '~/proguard5.2.1/lib'
+   }
+   dependencies {
+      classpath ':proguard'
+   }
+}
+
+task (minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask) {
+   configuration 'proguard.cfg'
+    
+   injars 'build/libs/Sample-Gradle-1.0.jar'
+   outjars 'build/libs/Sample-Gradle-1.0.min.jar'
+}
