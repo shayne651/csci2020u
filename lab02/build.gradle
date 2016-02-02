@@ -1,4 +1,10 @@
 apply plugin: 'java'
-dependencies{
-	compile: 'org.apache.commons:commons-csv:1.2'
+
+task compileOne (type: JavaCompile) {
+    source = sourceSets.main.java.srcDirs
+    include 'some/pkg/SimpleTest.java'
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
 }
+
+compileOne.options.compilerArgs = ["-sourcepath", "$lab02/src/main/java"]
