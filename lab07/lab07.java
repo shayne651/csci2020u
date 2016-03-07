@@ -82,9 +82,37 @@ public class lab07 extends Application
             {
                 end=((float)disasters[i]/total)*360;
                 gc.setFill(pieColours[i]);
-                gc.fillArc(400,300,200,200,start,end,ArcType.ROUND);
+                gc.fillArc(450,200,200,200,start,end,ArcType.ROUND);
                 start+=end;
+
+
             }
+
+        Font font = new Font("Arial", 24);
+        gc.setFont(font);
+        gc.setFill(Color.BLACK);
+        gc.fillText("FLash FLood", 100, 100);
+
+        gc.setFill(Color.AQUA);
+        gc.fillRect(75, 90, 10, 10);
+
+        gc.setFill(Color.BLACK);
+        gc.fillText("Severe Thunder Storm", 100, 200);
+
+        gc.setFill(Color.GOLD);
+        gc.fillRect(75, 190, 10, 10);
+
+        gc.setFill(Color.BLACK);
+        gc.fillText("Special Marine", 100, 300);
+
+        gc.setFill(Color.DARKORANGE);
+        gc.fillRect(75, 290, 10, 10);
+
+        gc.setFill(Color.BLACK);
+        gc.fillText("Tornado", 100, 400);
+
+        gc.setFill(Color.DARKSALMON);
+        gc.fillRect(75, 390, 10, 10);
     }
 
     public static void main(String[] args) {
